@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CYBER PU OPERA · 蒲剧数字皮影</title>
+    <script type="module" crossorigin src="./assets/index-CP-4QdXP.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-reqXMDff.css">
+  </head>
+  <body>
+    <div id="stage">
+      <!-- 摄像头画面（镜像显示，作为舞台背景） -->
+      <video id="video" autoplay playsinline muted></video>
+
+      <!-- 完整蒲剧人物（一整张 PNG，五层叠加做淡入淡出） -->
+      <div id="character"></div>
+
+      <!-- Debug 手腕圆点 -->
+      <div id="overlay"></div>
+
+      <!-- 顶部标题 -->
+      <header id="brand">
+        <h1>CYBER PU OPERA</h1>
+        <div class="brand-sub">蒲剧重构 · 数字皮影</div>
+      </header>
+
+      <!-- 状态 -->
+      <div id="status">
+        <div class="status-item"><span class="dot" id="dot-camera"></span>CAMERA <b id="camera-label">OFFLINE</b></div>
+        <div class="status-item"><span class="dot" id="dot-tracking"></span>HAND TRACKING <b id="tracking-label">—</b></div>
+      </div>
+
+      <!-- 当前角色 -->
+      <div id="puppet">
+        <div class="label">CURRENT PUPPET</div>
+        <div id="puppet-name">悬凳姝</div>
+        <div id="puppet-sub">CHAIR</div>
+      </div>
+
+      <!-- Debug -->
+      <div id="debug">
+        <button id="debug-toggle">DEBUG OFF</button>
+        <div id="debug-panel" hidden>
+          <div>CHARACTER <span id="db-char">—</span></div>
+          <div>POSE <span id="db-pose">—</span></div>
+          <div>LEFT HAND <span id="db-left">—</span></div>
+          <div>RIGHT HAND <span id="db-right">—</span></div>
+          <div>LEFT WRIST <span id="db-left-xy">—</span></div>
+          <div>RIGHT WRIST <span id="db-right-xy">—</span></div>
+          <div>HANDS CENTER X <span id="db-center">—</span></div>
+        </div>
+      </div>
+
+      <!-- 角色切换按钮 -->
+      <div id="char-buttons"></div>
+    </div>
+
+  </body>
+</html>
